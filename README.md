@@ -23,6 +23,14 @@ CK+ (The Extended Cohn-Kanade AU-Coded Facial Expression Database, CK+).
 
 ![MainWindows](https://github.com/Guguant/EmotionAI/blob/master/picture/lbptop.PNG)
 
+## Recognize Image Sequence
+
+![is](https://github.com/Guguant/EmotionAI/blob/master/picture/demo1.gif)
+
+## Recognize Video
+
+![video](https://github.com/Guguant/EmotionAI/blob/master/picture/demo1.gif)
+
 # Other
 
 Thanks for [@Anuvab](https://github.com/dbarshan/Anuvab).
