@@ -1,4 +1,4 @@
-# EmotionAI
+# lbptop emotion recognition
 Emotion recognition system based on LBP-TOP. 基于LBP-TOP的情绪自动识别系统.
 
 This is just a **Debug Try** for https://github.com/dbarshan/Anuvab.
