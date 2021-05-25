@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<bits>1</bits>
+<uniformPattern type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>2</cols>
+  <dt>f</dt>
+  <data>
+    0. 1.40129846e-45</data></uniformPattern>
+</opencv_storage>

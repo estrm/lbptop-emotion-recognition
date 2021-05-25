@@ -1,0 +1,36 @@
+<RCC>
+  <qresource prefix="/EmotionAI">
+    <file>Resources/boy1.png</file>
+    <file>Resources/boy2.png</file>
+    <file>Resources/tenor1.png</file>
+    <file>Resources/tenor2.png</file>
+    <file>Resources/statistics.png</file>
+    <file>Resources/app2.png</file>
+    <file>Resources/app1.png</file>
+  </qresource>
+  <qresource prefix="music">
+    <file>Resources/music/kanon.mp3</file>
+  </qresource>
+  <qresource prefix="toolbar">
+    <file>Resources/toolbar/imageSeq.png</file>
+    <file>Resources/toolbar/exit.png</file>
+    <file>Resources/toolbar/demoImage.png</file>
+    <file>Resources/toolbar/demoVideo.png</file>
+    <file>Resources/toolbar/camera.png</file>
+    <file>Resources/toolbar/openfile.png</file>
+  </qresource>
+  <qresource prefix="cat">
+    <file>Resources/cat/caty.png</file>
+    <file>Resources/cat/catg.png</file>
+    <file>Resources/cat/cata.png</file>
+  </qresource>
+  <qresource prefix="emolist">
+    <file>Resources/emolist/anger.png</file>
+    <file>Resources/emolist/disgusted.png</file>
+    <file>Resources/emolist/fear.png</file>
+    <file>Resources/emolist/happy.png</file>
+    <file>Resources/emolist/neutral.png</file>
+    <file>Resources/emolist/sad.png</file>
+    <file>Resources/emolist/surprise.png</file>
+  </qresource>
+</RCC>

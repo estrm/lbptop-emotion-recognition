@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Andyz</author>
+ <class>EmotionAI</class>
+ <widget class="QMainWindow" name="EmotionAI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1273</width>
+    <height>683</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>683</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Emotion recognition system based on LBP-TOP - EmotionAI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="emotion_ai_main_window.qrc">
+    <normaloff>:/EmotionAI/Resources/app1.png</normaloff>:/EmotionAI/Resources/app1.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>671</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+    </property>
+    <property name="title">
+     <string>视频</string>
+    </property>
+    <widget class="QGraphicsView" name="mainView">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>642</width>
+       <height>482</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:black;
+font: 75 18pt &quot;微软雅黑&quot;;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>540</y>
+      <width>348</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="playPauseBtn">
+       <property name="minimumSize">
+        <size>
+         <width>94</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #000;
+border: 2px solid #555;
+border-radius: 20px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+min-width: 80px;
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+
+QPushButton:disabled 
+{
+color: #333;
+}</string>
+       </property>
+       <property name="text">
+        <string>Play/Pause</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopReplayBtn">
+       <property name="minimumSize">
+        <size>
+         <width>94</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #000;
+border: 2px solid #555;
+border-radius: 20px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+min-width: 80px;
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+
+QPushButton:disabled 
+{
+color: #333;
+}</string>
+       </property>
+       <property name="text">
+        <string>Stop/Replay</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="CatchCameraBtn">
+       <property name="minimumSize">
+        <size>
+         <width>94</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #000;
+border: 2px solid #555;
+border-radius: 20px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+min-width: 80px;
+font: 75 12pt &quot;微软雅黑&quot;;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+
+QPushButton:disabled 
+{
+color: #333;
+}</string>
+       </property>
+       <property name="text">
+        <string>抓图</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_smile">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="emotion_ai_main_window.qrc">:/EmotionAI/Resources/boy2.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>10</y>
+      <width>561</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+    </property>
+    <property name="title">
+     <string>LBP-TOP特征</string>
+    </property>
+    <widget class="QLabel" name="frameXYView">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>150</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="frameXTView">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>150</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="frameYTView">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>30</y>
+       <width>150</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbptopView">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>511</width>
+       <height>172</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>390</y>
+      <width>561</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+    </property>
+    <property name="title">
+     <string>图像缓冲区</string>
+    </property>
+    <widget class="QLabel" name="buffer1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="buffer2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="buffer3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>30</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="buffer5">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>30</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="buffer4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: rgb(220, 220, 220);
+	border:1px solid rgb(220, 220, 220);
+	border-radius: 1px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="closeDrawerBtn">
+    <property name="geometry">
+     <rect>
+      <x>679</x>
+      <y>17</y>
+      <width>21</width>
+      <height>515</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton 
+{
+	color: rgb(220, 220, 220);
+	border: 0px solid #000;
+	border-radius: 1px;
+}
+
+QPushButton:hover 
+{
+	color: #000;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+						 fx: 0.3, fy: -0.4,
+						 radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed 
+{
+	background: qradialgradient(cx: 0.4, cy: -0.1,
+					     fx: 0.4, fy: -0.1,
+						radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openDrawerBtn">
+    <property name="geometry">
+     <rect>
+      <x>679</x>
+      <y>17</y>
+      <width>21</width>
+      <height>515</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton 
+{
+	color: rgb(220, 220, 220);
+	border: 0px solid #000;
+	border-radius: 1px;
+}
+
+QPushButton:hover 
+{
+	color: #000;
+	background: qradialgradient(cx: 0.3, cy: -0.4,
+						 fx: 0.3, fy: -0.4,
+						 radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+
+QPushButton:pressed 
+{
+	background: qradialgradient(cx: 0.4, cy: -0.1,
+					     fx: 0.4, fy: -0.1,
+						radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>540</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="delayLabel">
+       <property name="styleSheet">
+        <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string>时延</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="delaySpinBox">
+       <property name="minimumSize">
+        <size>
+         <width>66</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">font: 75 9pt &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ms</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_emo">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>530</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;Times New Roman&quot;;</string>
+    </property>
+    <property name="text">
+     <string>R.I.P</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_emo_time">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>560</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
+    </property>
+    <property name="text">
+     <string>welcome to EmotionAI.</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1273</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="actionOpen_Camera"/>
+    <addaction name="actionOpen_Video_File"/>
+    <addaction name="actionOpen_Image_Seq"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>演示(&amp;D)</string>
+    </property>
+    <addaction name="actionDemoImage"/>
+    <addaction name="actionDemoVideo"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>视图(&amp;V)</string>
+    </property>
+    <addaction name="actionViewLbptopHist"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>设置(&amp;S)</string>
+    </property>
+    <addaction name="actionLBP_TOP"/>
+    <addaction name="actionStorage"/>
+    <addaction name="separator"/>
+    <addaction name="action_EmotionAI"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonFollowStyle</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_open_camera"/>
+   <addaction name="action_open_video_file"/>
+   <addaction name="action_open_image_seq"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="styleSheet">
+    <string notr="true">background: rgb(220, 220, 220);</string>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="demoToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_demo_image"/>
+   <addaction name="action_demo_video"/>
+  </widget>
+  <action name="actionOpen_Camera">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/camera.png</normaloff>:/toolbar/Resources/toolbar/camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开摄像头(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_open_video_file">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/openfile.png</normaloff>:/toolbar/Resources/toolbar/openfile.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开视频文件(&amp;I)</string>
+   </property>
+  </action>
+  <action name="action_open_camera">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/camera.png</normaloff>:/toolbar/Resources/toolbar/camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开摄像头(&amp;F5)</string>
+   </property>
+  </action>
+  <action name="actionViewLbptopHist">
+   <property name="text">
+    <string>查看LBP-TOP(&amp;H)</string>
+   </property>
+  </action>
+  <action name="action_EmotionAI">
+   <property name="text">
+    <string>关于 EmotionAi</string>
+   </property>
+  </action>
+  <action name="actionOpen_Video_File">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/openfile.png</normaloff>:/toolbar/Resources/toolbar/openfile.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开视频文件(&amp;V)</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/exit.png</normaloff>:/toolbar/Resources/toolbar/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionDemoImage">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/demoImage.png</normaloff>:/toolbar/Resources/toolbar/demoImage.png</iconset>
+   </property>
+   <property name="text">
+    <string>静态图像演示(&amp;I)</string>
+   </property>
+  </action>
+  <action name="actionDemoVideo">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/demoVideo.png</normaloff>:/toolbar/Resources/toolbar/demoVideo.png</iconset>
+   </property>
+   <property name="text">
+    <string>静态视频演示(&amp;V)</string>
+   </property>
+  </action>
+  <action name="action_demo_image">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/demoImage.png</normaloff>:/toolbar/Resources/toolbar/demoImage.png</iconset>
+   </property>
+   <property name="text">
+    <string>静态图像演示</string>
+   </property>
+  </action>
+  <action name="action_demo_video">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/demoVideo.png</normaloff>:/toolbar/Resources/toolbar/demoVideo.png</iconset>
+   </property>
+   <property name="text">
+    <string>静态视频演示</string>
+   </property>
+  </action>
+  <action name="action_open_image_seq">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/imageSeq.png</normaloff>:/toolbar/Resources/toolbar/imageSeq.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开图像序列(&amp;I)</string>
+   </property>
+  </action>
+  <action name="actionOpen_Image_Seq">
+   <property name="icon">
+    <iconset resource="emotion_ai_main_window.qrc">
+     <normaloff>:/toolbar/Resources/toolbar/imageSeq.png</normaloff>:/toolbar/Resources/toolbar/imageSeq.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开图像序列(&amp;I)</string>
+   </property>
+  </action>
+  <action name="actionLBP_TOP">
+   <property name="text">
+    <string>LBP-TOP参数(&amp;L)</string>
+   </property>
+  </action>
+  <action name="actionStorage">
+   <property name="text">
+    <string>自定义存储参数</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="emotion_ai_main_window.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>OnOpenCameraBtn_Clicked()</slot>
+  <slot>OnCloseCameraBtn_Clicked()</slot>
+  <slot>OnCatchPictureBtn_Clicked()</slot>
+  <slot>OnTestBtn_Click()</slot>
+  <slot>OnActionDemoVideo_Triggered()</slot>
+  <slot>OnActionDemoImage_Triggered()</slot>
+ </slots>
+</ui>

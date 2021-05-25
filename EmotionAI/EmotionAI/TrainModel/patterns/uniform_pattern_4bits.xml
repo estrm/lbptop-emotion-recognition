@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<bits>4</bits>
+<uniformPattern type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>14</cols>
+  <dt>f</dt>
+  <data>
+    0. 1.40129846e-45 2.80259693e-45 4.20389539e-45 5.60519386e-45
+    8.40779079e-45 9.80908925e-45 1.12103877e-44 1.26116862e-44
+    1.54142831e-44 1.68155816e-44 1.82168800e-44 1.96181785e-44
+    2.10194770e-44</data></uniformPattern>
+</opencv_storage>

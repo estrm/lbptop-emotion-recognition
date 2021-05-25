@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Files\EmotionClassification">
+      <UniqueIdentifier>{85a0d16c-84d2-4b04-bd4a-d6b14f055a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EmotionClassification">
+      <UniqueIdentifier>{5343dbb4-99d1-40fb-86b0-eea1322b26ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EmotionClassification\svm.cc">
+      <Filter>Source Files\EmotionClassification</Filter>
+    </ClCompile>
+    <ClCompile Include="lbptopsettings.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uniform_pattern.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="face_buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="face_tracker.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo_lbp_static_image.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo_lbp_static_video.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emotion_ai_main_window.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmotionClassification\emotion_classification.cc">
+      <Filter>Source Files\EmotionClassification</Filter>
+    </ClCompile>
+    <ClCompile Include="EmotionClassification\hist.cc">
+      <Filter>Source Files\EmotionClassification</Filter>
+    </ClCompile>
+    <ClCompile Include="EmotionClassification\lbp.cc">
+      <Filter>Source Files\EmotionClassification</Filter>
+    </ClCompile>
+    <ClCompile Include="lbptop.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="storage_settings.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="music.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="lbptopsettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="demo_lbp_static_image.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="demo_lbp_static_video.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="emotion_ai_main_window.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="storage_settings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EmotionClassification\svm.h">
+      <Filter>Header Files\EmotionClassification</Filter>
+    </ClInclude>
+    <ClInclude Include="uniform_pattern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="face_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="face_tracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ec_global.h">
+      <Filter>Header Files\EmotionClassification</Filter>
+    </ClInclude>
+    <ClInclude Include="emotion_classification.h">
+      <Filter>Header Files\EmotionClassification</Filter>
+    </ClInclude>
+    <ClInclude Include="EmotionClassification\hist.h">
+      <Filter>Header Files\EmotionClassification</Filter>
+    </ClInclude>
+    <ClInclude Include="EmotionClassification\lbp.h">
+      <Filter>Header Files\EmotionClassification</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lbptop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="emotion_ai_main_window.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="emotion_ai_main_window.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="demo_lbp_static_video.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="demo_lbp_static_image.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="lbptopsettings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="storage_settings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EmotionAI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\app.ico" />
+  </ItemGroup>
+</Project>
