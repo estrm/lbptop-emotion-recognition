@@ -27,7 +27,7 @@ Emotion recognition system based on LBP-TOP. 基于LBP-TOP的情绪自动识别�
 ## Usage
 
 1. Open the project **EmotionAI.sln** with Visual Studio 2015 (or others higher version)
-2. Run the **Local Window Dbugger**
+2. Run the **Local Window Debugger**
 
 ## Demo
 
