@@ -1,5 +1,5 @@
 # lbptop emotion recognition
-Emotion recognition system based on LBP-TOP. 基于LBP-TOP的情绪自动识别系统.
+Emotion recognition system based on LBP-TOP.
 
 ![lbptop](picture/lbptop_main_window.PNG)
 
